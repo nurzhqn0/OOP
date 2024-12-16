@@ -6,19 +6,20 @@ public class Task_2_3{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
 
-        int sum = 0;
+        double bodyTemperature = in.nextDouble();
+        boolean isHigh, isLow;
 
-        while(true){
-            String n = in.nextLine();
+        isHigh = bodyTemperature > 37.5;
+        isLow = bodyTemperature < 36.0;
 
-            if(n.equals("ENTER")){
-                break;
-            } else{
-                sum += Integer.parseInt(n);
-            }
+        if (isHigh) {
+            System.out.println("Body temperature is high.");
+        } else if (isLow) {
+            System.out.println("Body temperature is low.");
+        } else {
+            System.out.println("Body temperature is normal.");
         }
 
-        System.out.println(sum);
         in.close();
     }
 }
